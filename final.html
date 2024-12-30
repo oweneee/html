@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣旅遊景點</title> <!-- 設定瀏覽器頁面的標題 -->
+        <meta charset="utf-8"> <!-- 指定文件的字符編碼為 UTF-8，支援中文 -->
+        <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet"> <!-- 加載外部 CSS，提供幻燈片效果的樣式 -->
+        <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script> <!-- 加載 jQuery，用於簡化 JavaScript 操作 -->
+        <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script> <!-- 加載 Flexslider 的功能腳本，用於幻燈片效果 -->
+        <script>
+            $(window).load(function() { 
+                $('.flexslider').flexslider({
+                    animation: "slide", <!-- 設定幻燈片動畫效果為滑動 -->
+                    rtl: true 
+                });
+            });
+        </script>
+        <style>
+            *{
+                margin:0; 
+                padding:0; 
+                color:gray; 
+                text-align:center; 
+        }
+        .top {
+            background-color: #f5f5f5;
+            padding: 10px 20px;
+        }
+        .top .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+        }
+        .nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+        .nav li {
+            margin: 0 10px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+        }
+        .nav a:hover {
+            background-color: #575757;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        li.dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+        .slider {
+            background-color: black;
+            margin-bottom: 20px;
+        }
+        .banner {
+            background-color: #eaf7ff;
+            padding: 40px 20px;
+        }
+        .banner h1 {
+            font-size: 36px;
+            color: #003d6b;
+        }
+        .banner p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .destinations {
+            padding: 40px 20px;
+        }
+        .destinations h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .destinations .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .destinations .place {
+            text-align: center;
+            width: 200px;
+        }
+        .destinations img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .destinations h3 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .contact {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+        }
+        .contact h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .contact .info {
+            font-size: 18px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="logo">探索台灣</div>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="#home">首頁</a></li>
+            <li><a href="#about">關於我們</a></li>
+            <li class="dropdown">
+                <a href="#destinations">熱門景點</a>
+                <div class="dropdown-content">
+                    <a href="#destinations">日月潭</a>
+                    <a href="#destinations">阿里山</a>
+                    <a href="#destinations">台北101</a>
+                    
+                </div>
+            </li>
+            <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+    </div>
+    <div class="slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <li><img src ="https://github.com/oweneee/picture/raw/main/R.jpg"></li>
+                <li><img src ="https://github.com/oweneee/picture/raw/main/101.jpg"></li>
+                <li><img src ="https://github.com/oweneee/picture/raw/main/%E5%A4%9A%E6%9E%97%E7%81%AB%E8%BB%8A%E7%AB%99.jpg"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner" id="about">
+        <h1>歡迎來到探索台灣</h1>
+        <p>探索台灣的美麗風景與文化，發現最值得前往的旅遊勝地。</p>
+    </div>
+    <div class="destinations" id="destinations">
+        <h2>熱門景點</h2>
+        <div class="container">
+            <div class="place">
+                <img src="https://github.com/oweneee/picture/raw/main/R%20(1).jpg" alt="日月潭">
+                <h3>日月潭</h3>
+            </div>
+            <div class="place">
+                <img src="https://github.com/oweneee/picture/raw/main/OIP.jpg" alt="阿里山">
+                <h3>阿里山</h3>
+            </div>
+            <div class="place">
+                <img src="https://github.com/oweneee/picture/raw/main/1024x768_attractions-image-jjmofe2wt0calhfnw2cfca.jpg" alt="台北101">
+                <h3>台北101</h3>
+            </div>
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <h2>聯絡我們</h2>
+        <p class="info">
+            電子郵件: xxx123456789@gmail.com<br>
+            電話: 0912345678<br>
+            地址: 台灣國釣魚台列島
+        </p>
+    </div>
+    <div class="footer">
+        &copy; 2024 黃元豪先生. 版權所有。
+    </div>
+</body>
+</html>
